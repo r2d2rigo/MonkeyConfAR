@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:urho="clr-namespace:Urho.Forms;assembly=UrhoSharp.Forms"
+             xmlns:viewModels="clr-namespace:MonkeyConfAr.ViewModels"
+             mc:Ignorable="d"
+             x:Class="MonkeyConfAr.Views.PlaneTrackingPage"
+             Title="Plane tracking">
+
+    <ContentPage.BindingContext>
+        <viewModels:PlaneTrackingPageViewModel />
+    </ContentPage.BindingContext>
+
+    <Grid>
+        <urho:UrhoSurface x:Name="_arSurface" />
+
+        <Label Margin="10" Text="{Binding PlaneCount, StringFormat='Tracked planes: {0}'}" TextColor="Red" FontAttributes="Bold" />
+    </Grid>
+
+</ContentPage>
